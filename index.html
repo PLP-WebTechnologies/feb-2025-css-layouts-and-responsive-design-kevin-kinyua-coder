@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Webpage</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    aside {
+      background: #f4f4f4;
+      padding: 1rem;
+    }
+
+    main {
+      background: #e2e2e2;
+      padding: 1rem;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header, footer {
+        font-size: 0.9rem;
+      }
+
+      nav a {
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Responsive Webpage</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="container">
+    <aside>
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content. It adjusts position on smaller screens.</p>
+    </aside>
+    <main>
+      <h2>Main Content</h2>
+      <p>This is the main content area. It takes up more space in larger screens and adjusts in smaller ones.</p>
+    </main>
+  </div>
+  <footer>
+    <p>&copy; 2025 Responsive Design Inc.</p>
+  </footer>
+</body>
+</html>
